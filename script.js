@@ -6,7 +6,7 @@ const leaders = [
   { name: "Y.Rohit", work: "Cultural programs coordination" },
   { name: "Y.Srikanth", work: "Transport" },
   { name: "R.Teja", work: "Prasadam and water distribution" },
-  { name: "R.Naveen", work: "Photography and video coverage" }
+  { name: "R.punnayya", work: "Photography and video coverage" }
 ];
 
 const container = document.getElementById("leaderContainer");
@@ -17,6 +17,7 @@ leaders.forEach(leader => {
   card.innerHTML = `
     <div class="leader-name">${leader.name}</div>
     <div class="leader-work">${leader.work}</div>
+    
   `;
   container.appendChild(card);
 });
