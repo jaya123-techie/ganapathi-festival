@@ -4,12 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gokanakonda Ganapathi Celebrations</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
-
   <header>
     <h1>Gokanakonda Ganapathi Celebrations</h1>
     <img src="./assets/ganapathi.jpg" alt="Ganapathi" class="ganapathi-img" />
@@ -17,71 +15,46 @@
 
   <div class="container" id="leaderContainer"></div>
 
-  <!-- Timetable -->
   <section class="timetable">
     <h2>3-Day Event Timetable</h2>
     <table>
       <tr><th>Day</th><th>Date</th><th>Event</th><th>Time</th></tr>
-      <tr><td>Day 1</td><td>Aug 27</td><td>ganapathi pooja</td><td>8AM–10PM</td></tr>
-      <tr><td>Day 2</td><td>Aug 28</td><td>Cultural Program(Rangoli competitions) only for ladies</td><td>4PM–7PM</td></tr>
-      <tr><td>Day 3</td><td>Aug 12</td><td>Visarjan & DJ with Transgender peoples</td><td>10AM–5PM</td></tr>
+      <tr><td>Day 1</td><td>Aug 27</td><td>Ganapathi Pooja</td><td>8AM–10PM</td></tr>
+      <tr><td>Day 2</td><td>Aug 28</td><td>Rangoli competitions(only for ladies)</td><td>4PM–7PM</td></tr>
+      <tr><td>Day 3</td><td>Aug 29</td><td>Nimarjanam & DJ with Transgender peoples</td><td>10AM–5PM</td></tr>
     </table>
   </section>
 
- <!-- Rangoli Competition Announcement -->
-<section class="announcement">
-  <h2>🎨 Rangoli Competition Announcement</h2>
-  <p>
-    All participants of the Rangoli Competition will receive prize money and special gifts!
-  </p>
-  <ul>
-    <li>🏆 1st prize money – 1000 rupees of Electric gadgets </li>
-    <li>🥈 2nd prize money – Iron Box</li>
-    <li>🎁 3rd prize money - Lunch Box </li>
-  </ul>
-</section>
+  <section class="announcement">
+    <h2>🎨 Rangoli Competition Announcement</h2>
+    <p>All participants of the Rangoli Competition will receive prize money and special gifts!</p>
+    <ul>
+      <li>🏆 1st Prize – ₹1000 worth Electric Gadget</li>
+      <li>🥈 2nd Prize – Iron Box</li>
+      <li>🎁 3rd Prize – Lunch Box</li>
+    </ul>
+  </section>
 
-
-
-  <!-- Registration
   <section class="registration">
     <h2>Registration Form</h2>
-    <form id="registrationForm"> -->
-      <!-- <input type="text" id="name" placeholder="Your Name" required /> -->
-      <!-- <input type="text" id="village" placeholder="Village Name" required /> -->
-      <!-- <input type="text" id="phone" placeholder="Phone Number" required /> -->
-      
-
-
-      <!-- <input type="number" id="amount" placeholder="Amount Paid (₹)" required /> -->
-      
-      <!-- <button type="submit">Register</button> -->
-    <!-- </form> -->
+    <form id="registrationForm">
+      <input type="text" id="name" placeholder="Name" required />
+      <!-- <input type="text" id="village" placeholder="Village" required /> -->
+      <input type="text" id="phone" placeholder="Phone Number" required />
+      <!-- <input type="text" id="interest" placeholder="Interested Program (e.g., Rangoli, Pooja)" required /> -->
+      <input type="number" id="amount" placeholder="Amount Paid (₹)" required />
+      <button type="submit">Register</button>
+    </form>
 
     <div class="qr-section">
-      <p>📱 Scan & Pay via PhonePe & google pay & Paytm & Cash & Check</p>
-      <img src="./assets/phone pay.webp" alt="PhonePe QR Code" class="qr-img" />
+      <p>📱 Scan & Pay via PhonePe, GPay, Paytm</p>
+      <img src="./assets/phone pay.webp" alt="QR Code" class="qr-img" />
     </div>
 
-    <form id="registrationForm">
-    <input type="text" id="name" placeholder="Name" required />
-    <input type="text" id="phone" placeholder="Phone" required />
-    <input type="number" id="amount" placeholder="Amount Paid" required />
-    <button type="submit">Register</button>
-  </form>
+    <h2>📋 Registered Participants</h2>
+    <ul id="participantList"></ul>
 
-  <h2>📋 Registered Participants</h2>
-  <ul id="participantList"></ul>
-
-  <button onclick="downloadExcel()">📥 Download Excel Sheet</button>
-
-
-
-
-    <div class="registered-list" id="registeredList">
-      <h3>Registered Participants</h3>
-      <ul id="participantList"></ul>
-    </div>
+    <button onclick="downloadExcel()">📥 Download Excel Sheet</button>
   </section>
 
   <footer>
@@ -90,7 +63,6 @@
   </footer>
 
   <script src="script.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script> -->
-
 </body>
 </html>
+

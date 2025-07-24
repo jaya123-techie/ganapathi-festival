@@ -1,10 +1,18 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f3f3;
+/* Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f3f3;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
 header {
   background-color: #e65100;
   color: white;
@@ -21,14 +29,17 @@ header h1 {
   width: 200px;
   height: auto;
   margin-top: 10px;
+  border-radius: 12px;
+  border: 3px solid white;
 }
 
+/* Leader Cards */
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
   gap: 20px;
+  padding: 20px;
 }
 
 .card {
@@ -36,7 +47,8 @@ header h1 {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 20px;
-  width: 300px;
+  width: 280px;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
@@ -52,17 +64,17 @@ header h1 {
 
 .leader-work {
   font-size: 16px;
-  color: #333;
+  margin-bottom: 6px;
 }
 
 .leader-payment {
   font-size: 15px;
-  margin-top: 6px;
   color: #2e7d32;
   font-weight: bold;
 }
 
-.timetable, .registration {
+/* Timetable Section */
+.timetable {
   max-width: 800px;
   margin: 20px auto;
   background: #fff;
@@ -74,66 +86,23 @@ header h1 {
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 10px;
 }
 
 th, td {
   padding: 10px;
   border: 1px solid #ccc;
   text-align: left;
+  font-size: 16px;
+  background-color: #fff;
 }
 
-form input, form select, form button {
-  padding: 10px;
-  margin: 8px 0;
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+th {
+  background-color: #ffe0b2;
+  color: #5d4037;
 }
 
-button {
-  background: #e65100;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #bf4800;
-}
-
-.download-btn {
-  background-color: #2e7d32;
-  margin-top: 10px;
-}
-
-.qr-section {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.qr-img {
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-}
-
-footer {
-  background: #222;
-  color: white;
-  padding: 15px;
-  text-align: center;
-}
-
-.signature {
-  margin-top: 10px;
-}
-
-.registered-list {
-  margin-top: 20px;
-}
-/* rangoli  */ 
+/* Rangoli Announcement */
 .announcement {
   background-color: #fff3e0;
   color: #4e342e;
@@ -145,7 +114,7 @@ footer {
 }
 
 .announcement h2 {
-  margin-top: 0;
+  margin-bottom: 10px;
   color: #e65100;
 }
 
@@ -159,30 +128,104 @@ footer {
   font-weight: bold;
 }
 
-
-body {
-  font-family: Arial, sans-serif;
+/* Registration Section */
+.registration {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
   padding: 20px;
-  background: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-form input, form button {
-  margin: 5px;
+.registration h2 {
+  margin-bottom: 15px;
+}
+
+form input, form select, form button {
   padding: 10px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
   font-size: 16px;
 }
 
-button {
+form button {
   background: #e65100;
   color: white;
-  border: none;
+  font-weight: bold;
   cursor: pointer;
-  border-radius: 5px;
-  padding: 10px 20px;
+  border: none;
+  transition: background 0.3s ease;
 }
 
-ul {
+form button:hover {
+  background: #bf4800;
+}
+
+/* Registered List */
+ul#participantList {
   list-style-type: none;
-  padding: 0;
+  margin-top: 15px;
+  padding-left: 0;
 }
 
+ul#participantList li {
+  padding: 8px;
+  background: #f9f9f9;
+  margin-bottom: 6px;
+  border-left: 4px solid #e65100;
+  border-radius: 4px;
+}
+
+/* Download Button */
+button.download-btn {
+  background-color: #2e7d32;
+  margin-top: 10px;
+}
+
+/* QR Section */
+.qr-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-img {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.signature {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .qr-img {
+    width: 150px;
+  }
+}
