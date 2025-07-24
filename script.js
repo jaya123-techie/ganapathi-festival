@@ -2,9 +2,10 @@
 const leaders = [
   { name: "R.Anil Kumar", work: "Money Maintaining" },
   { name: "R.Venugopi", work: "Team Maintaining" },
-  { name: "Y.Rohit", work: "Cultural Programs & Transport" },
-  { name: "S.Narasaraju", work: "Lighting and Decoration" },
-  { name: "M.Ajay Kumar", work: "Sound & Mic Setup & stage coverage" },
+  { name: "D.Narasaraju", work: "Lighting and Decoration" },
+  { name: "M.Ajay Kumar", work: "Sound & Mic Setup" },
+  { name: "Y.Rohit", work: "Cultural Programs" },
+  { name: "Y.Srikanth", work: "Transport" },
   { name: "R.Teja", work: "Prasadam & Water" },
   { name: "R.Punnayya", work: "Photography & Video" }
 ];
@@ -71,4 +72,3 @@ function downloadExcel() {
   XLSX.utils.book_append_sheet(workbook, worksheet, "Ganapathi_Registrations");
   XLSX.writeFile(workbook, "Ganapathi_Registrations.xlsx");
 }
-
