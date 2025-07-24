@@ -34,9 +34,9 @@ registrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
-  const village = document.getElementById("village").value.trim();
+  // const village = document.getElementById("village").value.trim();
   const phone = document.getElementById("phone").value.trim();
-  const interest = document.getElementById("interest").value.trim();
+  // const interest = document.getElementById("interest").value.trim();
   const amount = document.getElementById("amount").value.trim();
 
   if (name && village && phone && interest && amount) {
