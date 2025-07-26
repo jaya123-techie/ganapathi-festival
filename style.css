@@ -128,104 +128,170 @@ th {
   font-weight: bold;
 }
 
-/* Registration Section */
-.registration {
-  max-width: 800px;
-  margin: 20px auto;
-  background: #fff;
+/* phonepay Section */
+.payment-section {
+  background-color: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.registration h2 {
-  margin-bottom: 15px;
-}
-
-form input, form select, form button {
-  padding: 10px;
-  margin: 8px 0;
-  width: 100%;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-form button {
-  background: #e65100;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  transition: background 0.3s ease;
-}
-
-form button:hover {
-  background: #bf4800;
-}
-
-/* Registered List */
-ul#participantList {
-  list-style-type: none;
-  margin-top: 15px;
-  padding-left: 0;
-}
-
-ul#participantList li {
-  padding: 8px;
-  background: #f9f9f9;
-  margin-bottom: 6px;
-  border-left: 4px solid #e65100;
-  border-radius: 4px;
-}
-
-/* Download Button */
-button.download-btn {
-  background-color: #2e7d32;
-  margin-top: 10px;
-}
-
-/* QR Section */
-.qr-section {
+  max-width: 600px;
+  margin: 20px auto;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-section h2 {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.qr-code {
+  width: 250px;
+  height: auto;
+  margin: 10px 0;
+  border: 3px solid #4caf50;
+  border-radius: 12px;
+}
+
+/* registration process */
+
+.registration-section {
+  background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 950px;
+  margin: 30px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.registration-section h2 {
+  text-align: center;
+  color: #0d47a1;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.registration-section h3 {
+  text-align: center;
+  color: #0d47a1;
+  font-size: 22px;
+  margin-top: 30px;
+}
+
+#registrationForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#registrationForm input {
+  padding: 12px 15px;
+  font-size: 16px;
+  width: 220px;
+  border: 1px solid #64b5f6;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+#registrationForm input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 8px rgba(25, 118, 210, 0.3);
+}
+
+#registrationForm button {
+  padding: 12px 30px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#registrationForm button:hover {
+  background-color: #0d47a1;
+}
+
+/* Registration Table */
+#registrationTable {
+  width: 100%;
+  border-collapse: collapse;
   margin-top: 20px;
 }
 
-.qr-img {
-  width: 200px;
-  height: auto;
-  margin-top: 10px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-}
-
-/* Footer */
-footer {
-  background: #222;
-  color: white;
-  padding: 15px;
+#registrationTable th,
+#registrationTable td {
+  padding: 12px;
+  border: 1px solid #ddd;
   text-align: center;
-  margin-top: 40px;
+  font-size: 16px;
+  background-color: #ffffff;
 }
 
+#registrationTable th {
+  background-color: #2196f3;
+  color: white;
+  font-size: 17px;
+}
+
+#registrationTable tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+/* Download Button */
+.registration-section button[onclick] {
+  display: block;
+  margin: 30px auto 0;
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 12px 28px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration-section button[onclick]:hover {
+  background-color: #1b5e20;
+}
+
+/* Download Excel Button Style */
+.download-btn {
+  display: inline-block;
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  color: tomato;
+}
+
+.download-btn:hover {
+  background-color: #1b5e20;
+  transform: scale(1.03);
+}
+
+.download-btn:active {
+  background-color: #145a1f;
+  transform: scale(0.98);
+}
 .signature {
-  margin-top: 10px;
-  font-style: italic;
-  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  color: #e65100;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .card {
-    width: 90%;
-  }
-
-  .qr-img {
-    width: 150px;
-  }
-}

@@ -34,31 +34,48 @@
       <li>🎁 3rd Prize – Lunch Box</li>
     </ul>
   </section>
+  <!-- phone pay section -->
 
-  <section class="registration">
-    <h2>Registration Form</h2>
-    <form id="registrationForm">
-      <input type="text" id="name" placeholder="Name" required />
-      <!-- <input type="text" id="village" placeholder="Village" required /> -->
-      <input type="text" id="phone" placeholder="Phone Number" required />
-      <!-- <input type="text" id="interest" placeholder="Interested Program (e.g., Rangoli, Pooja)" required /> -->
-      <input type="number" id="amount" placeholder="Amount Paid (₹)" required />
-      <button type="submit">Register</button>
-    </form>
+  <section class="payment-section">
+  <h2>📱 Pay via PhonePe</h2>
+  <p>Scan the QR code below to make a contribution or payment.</p>
+  <img src="./assets/modifiedscanner.jpg" alt="PhonePe QR Code" class="qr-code" />
+  <p><strong>UPI ID:</strong> 8125348660-3@ybl</p>
+</section>
 
-    <div class="qr-section">
-      <p>📱 Scan & Pay via PhonePe, GPay, Paytm</p>
-      <img src="./assets/phone pay.webp" alt="QR Code" class="qr-img" />
-    </div>
 
-    <h2>📋 Registered Participants</h2>
-    <ul id="participantList"></ul>
+<!-- registration process -->
 
-    <button onclick="downloadExcel()">📥 Download Excel Sheet</button>
-  </section>
+<form id="registrationForm">
+  <input type="text" id="name" placeholder="Full Name" required />
+  <input type="tel" id="phone" placeholder="Phone Number" required />
+  <input type="number" id="amount" placeholder="Amount Paid (₹)" required />
+  <input type="text" id="transactionId" placeholder="Transaction ID" required />
+  <input type="text" id="upi" placeholder="UPI ID" required />
+  <button type="submit">Register</button>
+</form>
 
+<h3>📋 Registered Participants</h3>
+<table id="registrationTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Amount (₹)</th>
+      <th>Transaction ID</th>
+      <th>UPI ID</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+<button onclick="downloadExcel()">📥 Download Excel</button>
+
+
+
+
+  
   <footer>
-    &copy; 2025 Gokanakonda Youth Team. All Rights Reserved.
+    <!-- &copy; 2025 Gokanakonda Youth Team. All Rights Reserved. -->
     <div class="signature">✍️ Written by Jayakrishna</div>
   </footer>
 

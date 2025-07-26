@@ -23,52 +23,51 @@ leaders.forEach(leader => {
   container.appendChild(card);
 });
 
-// Registration logic
-const registrationForm = document.getElementById("registrationForm");
-const participantList = document.getElementById("participantList");
+// phonepay 
 
-let registrations = JSON.parse(localStorage.getItem("registrations")) || [];
-registrations.forEach(displayParticipant);
+  const qrImage = document.querySelector('.qr-code');
+  qrImage.addEventListener('click', () => {
+    alert("Open your PhonePe app and scan this QR to pay ₹2000. Thank you!");
+  });
 
-registrationForm.addEventListener("submit", (e) => {
+// registration process
+
+const form = document.getElementById('registrationForm');
+const tableBody = document.querySelector('#registrationTable tbody');
+let registrations = [];
+
+form.addEventListener('submit', function (e) {
   e.preventDefault();
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const amount = document.getElementById('amount').value;
+  const transactionId = document.getElementById('transactionId').value;
+  const upi = document.getElementById('upi').value;
 
-  const name = document.getElementById("name").value.trim();
-  // const village = document.getElementById("village").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  // const interest = document.getElementById("interest").value.trim();
-  const amount = document.getElementById("amount").value.trim();
+  const row = document.createElement('tr');
+  row.innerHTML = `
+    <td>${name}</td>
+    <td>${phone}</td>
+    <td>₹${amount}</td>
+    <td>${transactionId}</td>
+    <td>${upi}</td>
+  `;
+  tableBody.appendChild(row);
 
-  if (name && village && phone && interest && amount) {
-    const reg = {
-      Name: name,
-      Village: village,
-      Phone: phone,
-      Interest: interest,
-      Amount: amount
-    };
+  registrations.push({
+    Name: name,
+    Phone: phone,
+    Amount: `₹${amount}`,
+    TransactionID: transactionId,
+    UPI: upi
+  });
 
-    registrations.push(reg);
-    localStorage.setItem("registrations", JSON.stringify(registrations));
-    displayParticipant(reg);
-    registrationForm.reset();
-  }
+  form.reset();
 });
 
-function displayParticipant(reg) {
-  const li = document.createElement("li");
-  li.textContent = `${reg.Name} (${reg.Village}) - ${reg.Phone} | ${reg.Interest} | ₹${reg.Amount}`;
-  participantList.appendChild(li);
-}
-
 function downloadExcel() {
-  if (registrations.length === 0) {
-    alert("No registrations found!");
-    return;
-  }
-
-  const worksheet = XLSX.utils.json_to_sheet(registrations);
-  const workbook = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(workbook, worksheet, "Ganapathi_Registrations");
-  XLSX.writeFile(workbook, "Ganapathi_Registrations.xlsx");
+  const wb = XLSX.utils.book_new();
+  const ws = XLSX.utils.json_to_sheet(registrations);
+  XLSX.utils.book_append_sheet(wb, ws, "Participants");
+  XLSX.writeFile(wb, "Ganapathi_Event_Registrations.xlsx");
 }
