@@ -5,9 +5,10 @@ const leaders = [
   { name: "D.Narasaraju", work: "Lighting and Decoration" },
   { name: "M.Ajay Kumar", work: "Sound & Mic Setup" },
   { name: "Y.Rohit", work: "Cultural Programs" },
-  { name: "Y.Srikanth", work: "Transport" },
+  { name: "Y.Bhanu", work: "Transport & maintaining" },
   { name: "R.Teja", work: "Prasadam & Water" },
-  { name: "R.Punnayya", work: "Photography & Video" }
+  { name: "R.Punnayya", work: "Photography & Video" },
+  { name: "R.Maruthi", work: "" }
 ];
 
 // Display Leaders
