@@ -2,13 +2,14 @@
 const leaders = [
   { name: "R.Anil Kumar", work: "Money Maintaining" },
   { name: "R.Venugopi", work: "Team Maintaining" },
-  { name: "D.Narasaraju", work: "Lighting and Decoration" },
+  { name: "S.Narasaraju", work: "Lighting and Decoration" },
   { name: "M.Ajay Kumar", work: "Sound & Mic Setup" },
   { name: "Y.Rohit", work: "Cultural Programs" },
   { name: "Y.Bhanu", work: "Transport & maintaining" },
+  { name: "S.Anjaneyulu", work: "maintaining" },
   { name: "R.Teja", work: "Prasadam & Water" },
   { name: "R.Punnayya", work: "Photography & Video" },
-  { name: "R.Maruthi", work: "" }
+  { name: "R.Brahmaiah", work: "" }
 ];
 
 // Display Leaders
